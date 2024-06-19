@@ -1,0 +1,17 @@
+name: bsteele_music_rest
+description: A restful api for the bsteele music app using the shelf package
+version: 1.0.0
+# repository: https://github.com/pearlbob/bsteele_music_rest
+
+environment:
+  sdk: ^3.4.3
+
+dependencies:
+  args:
+  shelf:
+  shelf_router:
+
+dev_dependencies:
+  http:
+  lints:
+  test:
