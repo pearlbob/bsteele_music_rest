@@ -1,10 +1,12 @@
 import 'dart:io';
 
+import 'package:bsteele_music_lib/app_logger.dart';
 import 'package:http/http.dart';
 import 'package:test/test.dart';
 
+import '../bin/server.dart';
+
 void main() {
-  final port = '8080';
   final host = 'http://0.0.0.0:$port';
   late Process p;
 
@@ -35,5 +37,12 @@ void main() {
   test('404', () async {
     final response = await get(Uri.parse('$host/foobar'));
     expect(response.statusCode, 404);
+  });
+
+  test('main song list', () async {
+    final response = await get(Uri.parse('$host/mainSongList/Song_bob_by_bob'));
+    expect(response.statusCode, 200);
+    expect(response.body, 'song list here: "Song_bob_by_bob"');
+    logger.i('done');
   });
 }

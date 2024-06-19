@@ -10,6 +10,9 @@ dependencies:
   args:
   shelf:
   shelf_router:
+  logger:
+  bsteele_music_lib:
+    path: ../bsteeleMusicLib/bsteele_music_lib
 
 dev_dependencies:
   http:
