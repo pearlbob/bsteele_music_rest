@@ -1,5 +1,6 @@
 name: bsteele_music_rest
 description: A restful api for the bsteele music app using the shelf package
+publish_to: none
 version: 1.0.0
 # repository: https://github.com/pearlbob/bsteele_music_rest
 
